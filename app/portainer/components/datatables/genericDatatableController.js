@@ -20,6 +20,12 @@ function (PaginationService, DatatableService, PAGINATION_MAX_ITEMS) {
     selectedItems: []
   };
 
+  this.resetSelectionState = function() {
+    this.selectAll = false;
+    this.state.selectedItemCount = 0;
+    this.state.selectedItems = [];
+    _.map(this.state.filteredDataSet, (item) => item.Checked = false);
+  };
 
   this.onTextFilterChange = function() {
     DatatableService.setDataTableTextFilters(this.tableKey, this.state.textFilter);
