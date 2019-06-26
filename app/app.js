@@ -38,7 +38,7 @@ function ($rootScope, $state, LocalStorage, Authentication, authManager, StateMa
 
   $(document).ajaxSend(function (event, jqXhr, jqOpts) {
     const type = jqOpts.type === 'POST' || jqOpts.type === 'PUT' || jqOpts.type === 'PATCH';
-    const hasNoContentType = jqOpts.contentType !== 'application/json' && !jqOpts.headers['Content-Type'];
+    const hasNoContentType = jqOpts.contentType !== 'application/json' && jqOpts.headers && !jqOpts.headers['Content-Type'];
     if (type && hasNoContentType) {
       jqXhr.setRequestHeader('Content-Type', 'application/json');
     }
