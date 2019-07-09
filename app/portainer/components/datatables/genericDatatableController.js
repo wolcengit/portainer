@@ -21,7 +21,7 @@ function (PaginationService, DatatableService, PAGINATION_MAX_ITEMS) {
   };
 
   this.resetSelectionState = function() {
-    this.selectAll = false;
+    this.state.selectAll = false;
     this.state.selectedItemCount = 0;
     this.state.selectedItems = [];
     _.map(this.state.filteredDataSet, (item) => item.Checked = false);
