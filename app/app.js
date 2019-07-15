@@ -1,5 +1,6 @@
 import _ from 'lodash-es';
 import $ from 'jquery';
+import '@babel/polyfill'
 
 angular.module('portainer')
 .run(['$rootScope', '$state', 'LocalStorage', 'Authentication', 'authManager', 'StateManager', 'EndpointProvider', 'Notifications', 'Analytics', 'cfpLoadingBar', '$transitions', 'HttpRequestHelper',
