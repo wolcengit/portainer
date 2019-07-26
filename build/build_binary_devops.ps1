@@ -20,7 +20,7 @@ Set-Location -Path "api\cmd\portainer"
 go get -t -d -v ./...
 go build -v
 
-Copy-Item -Path "$($env:BUILD_SOURCESDIRECTORY)\api\cmd\portainer\$($binary)" -Destination "$($env:BUILD_SOURCESDIRECTORY)\dist\$($binary)" -Force
+#Copy-Item -Path "$($env:BUILD_SOURCESDIRECTORY)\api\cmd\portainer\$($binary)" -Destination "$($env:BUILD_SOURCESDIRECTORY)\dist\$($binary)" -Force
 
 ls "$($env:BUILD_SOURCESDIRECTORY)\api\cmd\portainer"
 ls "$($env:BUILD_SOURCESDIRECTORY)\dist"
